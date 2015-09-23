@@ -28,13 +28,15 @@
     </div>
   </div>
 
-  <script src="js/htmlminifier.min.js"></script>
+  <script src="js/cleancss.browser.js"></script>
+  <script src="js/htmlminifier.js"></script>
   <script>
     function minifyHtml() {
       var html = document.getElementById('htmlTextArea').value;
       var minifiedHtml = minify(html, { 
         collapseWhitespace: true,
         conservativeCollapse: true,
+        minifyCSS: true,
         quoteCharacter: '\'' 
       });
       document.getElementById('minifiedHtmlTextArea').value = minifiedHtml;
